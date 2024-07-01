@@ -1,0 +1,41 @@
+# Ignore build directories
+build-*
+
+# Ignore Qt Creator specific files
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+*.pro.user.*
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Ignore Qt Creator build output
+*.obj
+*.o
+*.a
+*.lib
+*.ncb
+*.sdf
+*.suo
+*.pdb
+*.idb
+*.ilk
+*.exp
+*.log
+*.pch
+*.aps
+*.opt
+*.plg
+
+# Ignore backup files
+*~
+\#*\#
+
+# Ignore folders
+.DS_Store
+.idea/
+.vscode/
