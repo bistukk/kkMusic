@@ -1,41 +1,58 @@
-# Ignore build directories
-build-*
+# 构建目录（你当前的）
+build/
+cmake-build-*/
 
-# Ignore Qt Creator specific files
+# Qt Creator 工程文件
 *.pro.user
 *.pro.user.*
 *.qmake.stash
-*.pro.user.*
 
-# Ignore temporary files
+# Qt 自动生成文件
+*.moc
+*_autogen/
+*.qrc.cpp
+*.ui.cpp
+*.qm
+
+# CMake 自动生成文件
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# 编译中间产物
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.exe
+*.out
+*.lib
+*.exp
+*.idb
+*.pdb
+*.ilk
+*.suo
+*.sdf
+*.ncb
+*.pch
+
+# IDE 相关
+.idea/
+.vscode/
+*.user
+*.user.*
+
+# 临时文件
 *.tmp
 *.bak
 *.swp
 *.swo
-
-# Ignore Qt Creator build output
-*.obj
-*.o
-*.a
-*.lib
-*.ncb
-*.sdf
-*.suo
-*.pdb
-*.idb
-*.ilk
-*.exp
 *.log
-*.pch
 *.aps
 *.opt
 *.plg
-
-# Ignore backup files
 *~
 \#*\#
-
-# Ignore folders
 .DS_Store
-.idea/
-.vscode/

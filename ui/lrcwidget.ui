@@ -3,7 +3,7 @@
  <class>lrcwidget</class>
  <widget class="QWidget" name="lrcwidget">
   <property name="windowModality">
-   <enum>Qt::NonModal</enum>
+   <enum>Qt::WindowModality::NonModal</enum>
   </property>
   <property name="geometry">
    <rect>
@@ -16,7 +16,7 @@
   <property name="windowTitle">
    <string>lrcWidget</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btnLrcClose">
    <property name="geometry">
     <rect>
      <x>9</x>
@@ -87,7 +87,7 @@ QSlider::sub-page:horizontal {
 </string>
    </property>
    <property name="orientation">
-    <enum>Qt::Horizontal</enum>
+    <enum>Qt::Orientation::Horizontal</enum>
    </property>
   </widget>
   <widget class="QLabel" name="labProcess">
@@ -119,8 +119,8 @@ QSlider::sub-page:horizontal {
     <rect>
      <x>480</x>
      <y>560</y>
-     <width>267</width>
-     <height>28</height>
+     <width>314</width>
+     <height>44</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -132,7 +132,7 @@ QSlider::sub-page:horizontal {
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="res.qrc">
+         <iconset resource="../resources/res.qrc">
           <normaloff>:/images/images/volumn.bmp</normaloff>:/images/images/volumn.bmp</iconset>
         </property>
        </widget>
@@ -171,7 +171,7 @@ QSlider::sub-page:horizontal {
 </string>
         </property>
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
        </widget>
       </item>
@@ -196,14 +196,14 @@ QSlider::sub-page:horizontal {
        <string>循环</string>
       </property>
       <property name="icon">
-       <iconset resource="res.qrc">
+       <iconset resource="../resources/res.qrc">
         <normaloff>:/images/images/refresh16.png</normaloff>:/images/images/refresh16.png</iconset>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -225,7 +225,7 @@ QSlider::sub-page:horizontal {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="res.qrc">
+       <iconset resource="../resources/res.qrc">
         <normaloff>:/images/images/616.bmp</normaloff>:/images/images/616.bmp</iconset>
       </property>
      </widget>
@@ -242,7 +242,7 @@ QSlider::sub-page:horizontal {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="res.qrc">
+       <iconset resource="../resources/res.qrc">
         <normaloff>:/images/images/620.bmp</normaloff>:/images/images/620.bmp</iconset>
       </property>
      </widget>
@@ -259,7 +259,7 @@ QSlider::sub-page:horizontal {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="res.qrc">
+       <iconset resource="../resources/res.qrc">
         <normaloff>:/images/images/630.bmp</normaloff>:/images/images/630.bmp</iconset>
       </property>
      </widget>
@@ -268,7 +268,7 @@ QSlider::sub-page:horizontal {
   </widget>
  </widget>
  <resources>
-  <include location="res.qrc"/>
+  <include location="../resources/res.qrc"/>
  </resources>
  <connections/>
 </ui>

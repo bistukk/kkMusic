@@ -61,7 +61,7 @@ lrcwidget::lrcwidget(QWidget *parent) :
 
 
     // 调整按钮层级关系
-    ui->pushButton->raise();
+    ui->btnLrcClose->raise();
 
     //创建动画对象
     ui->lrc_list->setStyleSheet(
@@ -401,8 +401,7 @@ QImage lrcwidget::applyBlurToImage(QImage sourceImage, int radius)
     return result;
 }
 
-void lrcwidget::on_pushButton_clicked()
+void lrcwidget::on_btnLrcClose_clicked()
 {
     hideLyric();
 }
-

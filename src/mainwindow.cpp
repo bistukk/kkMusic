@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "ui_lrcwidget.h""
+#include "ui_lrcwidget.h"
 #include<QDebug>
 #include <QFileDialog>
 #include "lrcwidget.h"
@@ -57,7 +57,7 @@ MainWindow::MainWindow(QWidget *parent)
     QPixmap pixmap(":/images/images/KK.jpg");
     ui->label->setPixmap(pixmap.scaled(ui->label->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-    isDragging == false;
+    isDragging = false;
     setWindowFlags(Qt::FramelessWindowHint);
     loadSavedMusic();
     ui->listWidget->installEventFilter(this);
@@ -661,4 +661,3 @@ void MainWindow::on_pushButton_clicked()
 {
     searchWidget->hide();
 }
-

@@ -30,23 +30,15 @@ public:
     QDoubleSpinBox* getSpeedSpinBox() const;
     QPushButton* getModeButton() const;
 
-
-
     void loadLyrics(const QString& filePath);
-
-
     QMap<QTime, QString> parseLyrics(const QString& filePath);
-
     void setCoverImage(const QPixmap &pixmap);
     void updateListHeight();
-
     void showLyric();//显示歌词
     void hideLyric();//隐藏歌词
     void resetCoverImage();//更新封面
     void clearLyrics();  // 添加一个清空歌词的方法
-
     void updateLabProcess(const QString &text);
-
 
 signals:
     void sliderMoved(int position);
@@ -57,6 +49,7 @@ private slots:
     void on_horizontalSlider_sliderMoved(int position);
     void on_horizontalSlider_sliderPressed();
     void on_horizontalSlider_sliderReleased();
+    void on_btnLrcClose_clicked();
 
 protected:
     void paintEvent(QPaintEvent *event) override;
@@ -65,16 +58,11 @@ protected:
 public slots:
     void updateLyrics(qint64 position);
 
-private slots:
-    void on_pushButton_clicked();
-
-
 private:
     Ui::lrcwidget *ui;
     QPixmap coverPixmap;//保存封面图像
     QPropertyAnimation *animation;//动画对象
     QMap<QTime, QString> lyricsMap;//歌词时间映射
-
     QLabel *noLyricsLabel; // 用于显示没有歌词的提示
     QStackedWidget *stackedWidget; // 用于管理多个窗口部件
 };

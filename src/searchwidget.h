@@ -3,7 +3,7 @@
 
 #include "qboxlayout.h"
 #include <QWidget>
-#include <QTableWidget> >
+#include <QTableWidget>
 #include <QHeaderView>
 
 class searchwidget : public QWidget
@@ -13,13 +13,11 @@ public:
     explicit searchwidget(QWidget *parent = nullptr);
     void displaySearchResults(const QStringList &results);
 
-
 private:
     QTableWidget *tableWidget;
 
-signals:
+Q_SIGNALS:
     void songDoubleClicked(const QString &songName);
-
 };
 
 #endif // SEARCHWIDGET_H

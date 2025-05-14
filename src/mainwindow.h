@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QtMultimedia>
-#include "LrcWidget.h"
+#include "lrcwidget.h"
 #include "searchwidget.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +25,7 @@ protected:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -32,7 +33,6 @@ public:
 
 
 private slots:
-    void resizeEvent(QResizeEvent *event);
     void updateCoverArtSize();
     QStringList getSavedMusicPaths();
     void loadSavedMusic();

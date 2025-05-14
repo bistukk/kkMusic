@@ -19,15 +19,13 @@ searchwidget::searchwidget(QWidget *parent)
     layout->addWidget(tableWidget);
     setLayout(layout);
 
-    connect(tableWidget, &QTableWidget::cellDoubleClicked, this, [this] {
-        QTableWidgetItem *item = tableWidget->item(item->row(), 0);  // 获取歌曲名所在的单元格
+    connect(tableWidget, &QTableWidget::cellDoubleClicked, this, [this](int row, int column) {
+        QTableWidgetItem *item = tableWidget->item(row, 0);  // 获取歌曲名所在的单元格
             if (item) {
                 emit songDoubleClicked(item->text());
             }
         });
 }
-
-
 
 void searchwidget::displaySearchResults(const QStringList &results)
 {
